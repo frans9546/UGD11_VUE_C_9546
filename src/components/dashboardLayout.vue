@@ -25,7 +25,7 @@
                 <v-list-item                 
                 v-for="item in items"                 
                 :key="item.title"                 
-                link                 
+                link router :to= "item.to"               
                 >                 
                 <v-list-item-icon>                     
                     <v-icon>{{ item.icon }}</v-icon>                 
@@ -75,7 +75,8 @@
             return {         
                 drawer: null,         
                 items: [           
-                    { title: 'User Controller', icon: 'mdi-human-male' },         
+                    { title: 'User Controller', icon: 'mdi-human-male', to: '/' },
+                    { title: 'Branches Controller', icon: 'mdi-hammer', to: '/branches' },         
                 ],       
             }     
         },   
